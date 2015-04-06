@@ -1,18 +1,16 @@
 var express = require('express');
 var app = express();
 
+
 app.set('port', (process.env.PORT || 5000));
 app.use(express.static(__dirname + '/public'));
 
 app.get('/', function(request, response) {
-
-   //  VAR FS = REQUIRE('FS');
-
- //    FS.READFILE('INDEX.HTML', FUNCTION (ERR, DATA) {
-
- //	IF (ERR) THROW ERR;
- response.send('HEY WORLD');
-  //});
+var fs = require('fs');
+fs.readFile('index.html', function (err, data) {
+    if (err) throw err;
+   response.send(data.toString());
+});
 
 });
 
