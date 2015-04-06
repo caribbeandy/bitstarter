@@ -6,13 +6,13 @@ app.use(express.static(__dirname + '/public'));
 
 app.get('/', function(request, response) {
 
-  //  var fs = require('fs');
+   //  VAR FS = REQUIRE('FS');
 
-//    fs.readFile('index.html', function (err, data) {
+ //    FS.READFILE('INDEX.HTML', FUNCTION (ERR, DATA) {
 
-	if (err) throw err;
-response.send('Hey world');
-    });
+ //	IF (ERR) THROW ERR;
+ response.send('HEY WORLD');
+  //});
 
 });
 
